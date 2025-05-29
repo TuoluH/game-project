@@ -13,18 +13,21 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   frameRate(100);
   target = new Target();
+  noStroke();
 }
 
 function draw() {
-  background(200);
+  background(135,206,260);
 
+  fill(255,220,0);
+  rect(0,height-110,width,110);
+  fill(0, 0, 0)
   textAlign(RIGHT, TOP);
   textSize(30);
   text("Score: " + score, width - 10, 10);
   text("High Score: " + highscore, width - 10, 40);
   textAlign(CENTER, TOP);
   textSize(60);
-
   fill(255, 0, 0);
   text(60 - Math.floor((millis() - startTime) / 1000), width / 2, 10);
 
