@@ -77,10 +77,11 @@ class Target {
 }
 
 function mousePressed() {
-  if (millis() - lastClick >= 500 || millis() < 500) {
+  if (millis() - lastClick >= 200 || millis() < 200) {
     if ((mouseX >= target.x && mouseX <= target.x + 50) && (mouseY >= target.y && mouseY <= target.y + 50)) {
       score += target.points;
       target = new Target();
+      lastClick = 0;
     }
     lastClick = millis();
   }
